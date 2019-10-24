@@ -8,15 +8,6 @@ import java.Queue;
 // DP solution 
 
 class Matrix01Method3 {
-    private class Point {
-        int r;
-        int c;
-
-        public Point(int r, int c) {
-            this.r = r;
-            this.c = c;
-        }
-    }
 
     public int[][] adjacent0s(int[][] matrix) {
         int numRows = matrix.length;
@@ -29,7 +20,7 @@ class Matrix01Method3 {
         int[][] dist = new int[numRows][numCols];
         for (int i=0; i<numRows; i++) {
             for (int j=0; j<numCols; j++) {
-                dist[i][j] = Integer.MAX_VALUE;
+                dist[i][j] = Integer.MAX_VALUE - 100000;
             }
         }
 
