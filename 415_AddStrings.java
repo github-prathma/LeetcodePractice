@@ -49,7 +49,7 @@ class AddStrings {
         sb = sb.reverse();
         return sb.toString();
     }
-,    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String num1 = br.readLine();

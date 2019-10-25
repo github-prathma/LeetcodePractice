@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-//O(n) 21ms
+//O(n) 4ms
 class AddStringsMethod2 {
     public String addTwoStrings(String num1, String num2) {
         int numOfDigits = Math.max(num1.length(), num2.length());
