@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 
+//minels from all possible paths in a grid from top left to bottom right
 class MatrixTraversal { 
     static List<Integer> minEls = new ArrayList<>();
     public static void printMatrix(int mat[][], int m, int n, int i, int j, int path[], int idx, int minPath) { 
