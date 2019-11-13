@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.*;
 
+// given a grid with elevations, find all possible paths from top left to bottom right, 
+// find min elevation in every path, then return the max of all mins.
 class MaxInAllPaths {
     public static int globalMax = -1;
     public static void maxInPaths(int[][] mat, int row, int col, int min) {
