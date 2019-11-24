@@ -12,21 +12,6 @@ class AddTwoNums {
         }
     }
 
-    // public LinkedList insert(LinkedList list, int data) {
-    //     Node newNode = new Node(data);
-    //     newNode.next = null;
-
-    //     if (list.head == null) {
-    //         list.head = newNode;
-    //     } else {
-    //         Node temp = list.head;
-    //         while (temp.next != null) {
-    //             temp = temp.next;
-    //         }
-    //         temp.next = newNode;
-    //     }
-    //     return list;
-    // }
 
     public static Node sum(Node l1, Node l2) {
         List<Integer> l1Digs = new ArrayList<>();
@@ -94,7 +79,6 @@ class AddTwoNums {
         }
         
         Collections.reverse(sumRes);
-        // System.out.println(sumRes);
         Node newNode = new Node(sumRes.get(0));
         Node t = newNode;
         
