@@ -58,7 +58,7 @@ class BasicCalculator {
             }
         }
 
-        System.out.println(st);
+        // System.out.println(st);
         // if (!st.isEmpty()) {
         //     res = Long.parseLong(st.pop());
         //     while(!st.isEmpty()) {
