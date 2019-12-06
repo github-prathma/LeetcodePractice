@@ -11,7 +11,18 @@ import java.util.*;
 //Optimised code for handling numbers greater than BigInt
 class StrangeSort {
     public static TreeMap sortByKey(HashMap<String, ArrayList<String>> mp) {
-        TreeMap<String, ArrayList<String> > tp = new TreeMap<>();
+        TreeMap<String, ArrayList<String> > tp = new TreeMap<>(new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                int l1 = s1.length();
+                int l2 = s2.length();
+                int c = l1-l2;
+                if (c == 0) {
+                    c = s1.compareTo(s2);
+                }
+                return c;
+            } 
+        });
 
         tp.putAll(mp);
 
@@ -40,7 +51,7 @@ class StrangeSort {
                 ind++;
             } 
             StringBuffer newStrB = new StringBuffer(mappedStrNum);
-            newStrB.replace(0, i, "");
+            newStrB.replace(0, ind, "");
             mappedStrNum = newStrB.toString();
 
             if (mp.get(mappedStrNum) == null) 
@@ -53,6 +64,7 @@ class StrangeSort {
             }
         }
         TreeMap<String, ArrayList<String> > tp = sortByKey(mp);
+        System.out.println(tp);
         for (Map.Entry<String,ArrayList<String>> entry : tp.entrySet() ) {
             results.addAll(entry.getValue());
         }
