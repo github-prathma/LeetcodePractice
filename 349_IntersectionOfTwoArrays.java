@@ -3,15 +3,18 @@ import java.io.*;
 
 class IntersectionOfTwoArrays {
     public static int[] intersection(int[] nums1, int[] nums2) {
+        if (nums1.length > nums2.length) {
+            return intersection(nums2, nums1);
+        }
         HashSet<Integer> st = new HashSet<>();
-        for (int i=0; i<nums1.length; ++i) {
-            st.add(nums1[i]);
+        for (int i=0; i<nums2.length; ++i) {
+            st.add(nums2[i]);
         }
 
         Set<Integer> ans = new HashSet<>();
-        for (int i=0; i<nums2.length; ++i) {
-            if (st.contains(nums2[i])) {
-                ans.add(nums2[i]);
+        for (int i=0; i<nums1.length; ++i) {
+            if (st.contains(nums1[i])) {
+                ans.add(nums1[i]);
             }
         }
         return ans.stream().mapToInt(Integer::intValue).toArray();
