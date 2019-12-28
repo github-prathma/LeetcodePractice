@@ -6,28 +6,17 @@ class FizzBuzz {
     public static List<String> fizzBuzz(int n) {
         List<String> ans = new ArrayList<>();
         for (int i=1; i<=n; ++i) {
-            boolean divBy3 = false;
-            boolean divBy5 = false;
-            if (i%5 == 0) {
-                divBy5 = true;
+            if (i % 3 == 0 && i % 5 == 0) {
+                ans.add("FizzBuzz");
+            } else if (i%3 == 0) {
+                ans.add("Fizz");
+            } else if (i%5 == 0) {
+                ans.add("Buzz");
+            } else {
+                ans.add(String.valueOf(i));
             }
-            if (i%3 == 0) {
-                divBy3 = true;
-            }
-
-            String numAns = "";
-            if (divBy3) {
-                numAns += "Fizz";
-            }
-            if (divBy5) {
-                numAns += "Buzz";
-            }
-            if (numAns.compareTo("") == 0) {
-                numAns += Integer.toString(i);
-            }
-            ans.add(numAns);
         }
-        return ans;
+        return ans;    
     }
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
