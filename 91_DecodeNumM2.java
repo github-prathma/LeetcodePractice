@@ -13,7 +13,7 @@ class DecodeWays {
 			}
 			if (i>=2) {
 				String str = Character.toString(s.charAt(i-2))+Character.toString(s.charAt(i-1));
-				System.out.println(str);
+				// System.out.println(str);
 				if (Integer.parseInt(str) >= 10 && Integer.parseInt(str) <= 26) {
 					dp[i] += dp[i-2];
 				}
