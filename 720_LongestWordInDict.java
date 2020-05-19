@@ -39,10 +39,9 @@ class LongestWord {
 		}
 
 		String res = "";
-		int longestLength = 0;
 
 		for (String word : words) {
-			longestLength = 0;
+			int longestLength = 0;
 
 			TrieNode curr = root;
 
